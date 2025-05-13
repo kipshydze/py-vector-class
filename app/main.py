@@ -33,9 +33,9 @@ class Vector:
     @classmethod
     def create_vector_by_two_points(cls, start_point: tuple,
                                     end_point: tuple) -> "Vector":
-        x = end_point[0] - start_point[0]
-        y = end_point[1] - start_point[1]
-        return cls(x, y)
+        x_coord = end_point[0] - start_point[0]
+        y_coord = end_point[1] - start_point[1]
+        return cls(x_coord, y_coord)
 
     def get_length(self) -> float:
         return math.sqrt(self.x ** 2 + self.y ** 2)
