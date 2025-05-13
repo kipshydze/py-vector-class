@@ -21,10 +21,8 @@ class Vector:
 
     def __mul__(self, other: "Vector") -> Union["Vector", float]:
         if isinstance(other, (int, float)):
-            # Множення на число
             return Vector(self.x * other, self.y * other)
         elif isinstance(other, Vector):
-            # Dot product
             return self.x * other.x + self.y * other.y
         else:
             raise TypeError
