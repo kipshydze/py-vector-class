@@ -3,20 +3,20 @@ from typing import Union
 
 
 class Vector:
-    def __init__(self, x: float, y: float) -> None:
-        self.x = round(x, 2)
-        self.y = round(y, 2)
+    def __init__(self, x_coordinate: float, y_coordinate: float) -> None:
+        self.x = round(x_coordinate, 2)
+        self.y = round(y_coordinate, 2)
 
     def __add__(self, other: "Vector") -> "Vector":
         return Vector(
-            x=self.x + other.x,
-            y=self.y + other.y
+            x_coordinate=self.x + other.x,
+            y_coordinate=self.y + other.y
         )
 
     def __sub__(self, other: "Vector") -> "Vector":
         return Vector(
-            x=self.x - other.x,
-            y=self.y - other.y
+            x_coordinate=self.x - other.x,
+            y_coordinate=self.y - other.y
         )
 
     def __mul__(self, other: "Vector") -> Union["Vector", float]:
@@ -45,8 +45,8 @@ class Vector:
         if length == 0:
             return Vector(0, 0)
         return Vector(
-            x=self.x / length,
-            y=self.y / length
+            x_coordinate=self.x / length,
+            y_coordinate=self.y / length
         )
 
     def angle_between(self, other: "Vector") -> int:
